@@ -1,0 +1,309 @@
+:root {
+  --pink-light: #ffd1dc;
+  --pink-medium: #ffb6c1;
+  --pink-dark: #ff69b4;
+  --white: #ffffff;
+  --gray-light: #f8f9fa;
+  --gray-dark: #343a40;
+  --gold: #ffd700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--white) 0%, var(--pink-light) 100%);
+  color: var(--gray-dark);
+  min-height: 100vh;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Header Styles */
+.site-header {
+  text-align: center;
+  padding: 2rem 0;
+  animation: fadeIn 1s ease-in;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--pink-dark);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accent-text {
+  font-size: 3.5rem;
+  color: var(--pink-dark);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--gray-dark);
+  opacity: 0.8;
+}
+
+.bounce {
+  animation: bounce 0.5s ease-in-out;
+}
+
+/* Special Message Styles */
+.special-message-container {
+  background: linear-gradient(135deg, #ffe8ee 0%, #fff6f8 100%);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--pink-medium);
+  transition: box-shadow 0.5s ease, transform 0.3s ease;
+}
+
+.special-message-container.glow {
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+.special-message-container:hover {
+  transform: translateY(-5px);
+}
+
+.special-message-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--pink-dark);
+}
+
+.heartbeat-icon {
+  animation: heartbeat 1.5s infinite;
+}
+
+.star-icon {
+  color: var(--gold);
+  margin: 0 8px;
+  animation: twinkle 2s infinite;
+}
+
+.special-message-content h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--pink-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.get-well-message {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.important-message {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: var(--pink-dark);
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 182, 193, 0.3) 50%, transparent 100%);
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+/* Section Styles */
+.content-section {
+  background-color: var(--white);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0.9;
+}
+
+.content-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+}
+
+.content-section h2 {
+  color: var(--pink-dark);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Animated elements */
+.animated-emoji {
+  font-size: 4rem;
+  text-align: center;
+  margin: 1rem 0;
+  animation: pulse 2s infinite;
+}
+
+.gif-container {
+  max-width: 100%;
+  height: 200px;
+  margin: 1rem auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.meme-container {
+  background-color: var(--pink-light);
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+.meme {
+  text-align: center;
+}
+
+.meme h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.meme p {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+/* Button Styles */
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.special-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.special-button.pressed {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.proud-button {
+  background-color: var(--pink-dark);
+  color: var(--white);
+}
+
+.whatsapp-button {
+  background-color: #25D366;
+  color: var(--white);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  color: var(--gray-dark);
+}
+
+.small-note {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .accent-text {
+    font-size: 3rem;
+  }
+  
+  .buttons-container {
+    flex-direction: column;
+  }
+  
+  .special-button {
+    width: 100%;
+    margin: 0.5rem 0;
+    justify-content: center;
+  }
+  
+  .special-message-content h2 {
+    font-size: 1.5rem;
+  }
+}
